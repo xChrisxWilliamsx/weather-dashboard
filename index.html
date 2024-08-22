@@ -12,90 +12,59 @@
     
     <!-- Header -->
     <!-- [delete when done] Add custom colors, flex position, font/nav size -->
-    <nav class="navbar">
-        <div class="container-fluid">
+    <nav class="navbar w-100 fs-1 fw-bolder text-white d-flex flex-row flex-wrap justify-content-center p-0 customHeader">
             <p>Weather Dashboard</p>
-        </div>
     </nav>
 
     <!-- Main Content -->
-    <div> <!-- [delete when done] keep this as flex row + wrap -->
+    <div class="d-flex flex-row flex-wrap justify-content-around"> <!-- [delete when done] keep this as flex row + wrap -->
 
-        <div> <!-- [delete when done] flex column + wrap -->
-
+        <div class="d-flex flex-column flex-wrap flex-fill m-2"> <!-- [delete when done] flex column + wrap -->
             <!-- Search for a City form input -->
-            <div>
-                <label class="form-label">Search for a City:</label>
-                <div class="input-group mb-3">
+            <div class="mb-2 pb-2 border-bottom border-dark border-3">
+                <label class="form-label fs-4 fw-bold">Search for a City:</label>
+                <div class="input-group mb-2">
                     <input type="text" class="form-control" placeholder="Type to search..." aria-label="Search by City" aria-describedby="basic-addon1">
                 </div>
-                <button class="btn btn-primary" type="button">Button</button>
+                <button class="btn btn-primary bg-gradient w-100 fs-5 p-0" type="button">Search</button>
             </div>
 
             <!-- [delete when done] Should have line separation between these two / add board box bottom with padding ^ -->
             <!-- Saved geo location cards -->
-            <div>
+            <div class="d-flex flex-column ">
                 <!-- [delete when done] Saved geo locations (use local storage and js cards to create.  For now/testing set cards in HTML file) -->
                 <!-- Cards for testing -->
-                <div class="card">
-                    <div class="card-body">
-                        Wilsonville
-                    </div>
-                </div>
+                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button>
 
-                <div class="card">
-                    <div class="card-body">
-                        Sacramento
-                    </div>
-                </div>
+                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button>
 
-                <div class="card">
-                    <div class="card-body">
-                        Roseville
-                    </div>
-                </div>
+                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button>
 
-                <div class="card">
-                    <div class="card-body">
-                        Portland
-                    </div>
-                </div>
+                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button>
 
-                <div class="card">
-                    <div class="card-body">
-                        Seattle
-                    </div>
-                </div>
+                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button>
 
-                <div class="card">
-                    <div class="card-body">
-                        Branson
-                    </div>
-                </div>
+                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button>
 
-                <div class="card">
-                    <div class="card-body">
-                        Monroe
-                    </div>
-                </div>
+                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button>
 
-                <div class="card">
-                    <div class="card-body">
-                        Carmel-by-the-Sea
-                    </div>
-                </div>
+                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button>
+
             </div>
 
         </div>        
 
-        <div> <!-- [delete when done] flex column + wrap + flex grow-->
+        <div class="d-flex flex-column flex-wrap w-75 m-2"> <!-- [delete when done] flex column + wrap + flex grow-->
 
             <!-- Current day forecast card -->
+            <h1 class="m-2 fs-2 fw-bold">Current Day:</h1>
             <div>
                 <!-- [delete when done] main current / list location, date (M/DD/YYYY), icon for day/night/cloudy/rain/windy, temp in f, wind in mph, humidity in %.  Wrap in thin board box -->
-                <div class="card">
-                    <div class="card-body">
-                        <h1>Wilsonville (8/21/2024) &#x263C;</h1>
+                <div class="card border border-dark border-3 m-2">
+                    <div class="card-body fs-4 fw-bold">
+                        <h1 class="fw-bolder pb-3">[test] Wilsonville</h1>
+                        <p>(8/22/2024)</p>
+                        <p>&#x263C;</p>
                         <p>Temp: 61 °F</p>
                         <p>Wind: 4 MPH</p>
                         <p>Humidity: 82 %</p>
@@ -104,56 +73,60 @@
             </div>
 
             <!-- 5-Day Forecast cards -->
-            <div>
+            <h1 class="m-2 fs-2 fw-bold">5-Day Forecast:</h1>
+            <div class="card-group">
                 <!-- [delete when done] 5-Day Forecast: 5 cards in html but content is through js and api.  date (M/DD/YYYY), icons for day/night/cloudy/rain/windy, temp in f, wind in mph, humidity in %. flex row + wrap -->
-                <div class="card">
-                    <div class="card-body">
-                        <h1>Wilsonville (8/22/2024) &#x263C;</h1>
+                <div class="card fw-bold bg-secondary bg-gradient border border-dark border-3 m-2">
+                    <div class="card-body fs-4">
+                        <p>(8/22/2024)</p>
+                        <p>&#x263C;</p>
                         <p>Temp: 61 °F</p>
                         <p>Wind: 4 MPH</p>
                         <p>Humidity: 82 %</p>
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-body">
-                        <h1>Wilsonville (8/23/2024) &#x263C;</h1>
+                <div class="card fw-bold bg-secondary bg-gradient border border-dark border-3 m-2">
+                    <div class="card-body fs-4">
+                        <p>(8/22/2024)</p>
+                        <p>&#x263C;</p>
                         <p>Temp: 61 °F</p>
                         <p>Wind: 4 MPH</p>
                         <p>Humidity: 82 %</p>
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-body">
-                        <h1>Wilsonville (8/24/2024) &#x263C;</h1>
+                <div class="card fw-bold bg-secondary bg-gradient border border-dark border-3 m-2">
+                    <div class="card-body fs-4">
+                        <p>(8/22/2024)</p>
+                        <p>&#x263C;</p>
                         <p>Temp: 61 °F</p>
                         <p>Wind: 4 MPH</p>
                         <p>Humidity: 82 %</p>
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-body">
-                        <h1>Wilsonville (8/25/2024) &#x263C;</h1>
+                <div class="card fw-bold bg-secondary bg-gradient border border-dark border-3 m-2">
+                    <div class="card-body fs-4">
+                        <p>(8/22/2024)</p>
+                        <p>&#x263C;</p>
                         <p>Temp: 61 °F</p>
                         <p>Wind: 4 MPH</p>
                         <p>Humidity: 82 %</p>
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-body">
-                        <h1>Wilsonville (8/26/2024) &#x263C;</h1>
+                <div class="card fw-bold bg-secondary bg-gradient border border-dark border-3 m-2">
+                    <div class="card-body fs-4">
+                        <p>(8/22/2024)</p>
+                        <p>&#x263C;</p>
                         <p>Temp: 61 °F</p>
                         <p>Wind: 4 MPH</p>
                         <p>Humidity: 82 %</p>
                     </div>
                 </div>
             </div>
-
         </div>
-
     </div>
 
     <link href="./assets/js/index.js">
