@@ -22,19 +22,19 @@
         <div class="d-flex flex-column flex-wrap flex-fill m-2"> <!-- [delete when done] flex column + wrap -->
             <!-- Search for a City form input -->
             <div class="mb-2 pb-2 border-bottom border-dark border-3">
-                <label class="form-label fs-4 fw-bold">Search for a City:</label>
+                <label for="cityInput" class="form-label fs-4 fw-bold">Search for a City:</label>
                 <div class="input-group mb-2">
-                    <input type="text" class="form-control" placeholder="Type to search..." aria-label="Search by City" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" id="cityInput" placeholder="Type to search..." aria-label="Search by City" aria-describedby="basic-addon1">
                 </div>
-                <button class="btn btn-primary bg-gradient w-100 fs-5 p-0" type="button">Search</button>
+                <button class="btn btn-primary bg-gradient w-100 fs-5 p-0" id="saveCity" type="button">Search</button>
             </div>
 
             <!-- [delete when done] Should have line separation between these two / add board box bottom with padding ^ -->
             <!-- Saved geo location cards -->
-            <div class="d-flex flex-column ">
-                <!-- [delete when done] Saved geo locations (use local storage and js cards to create.  For now/testing set cards in HTML file) -->
+            <div class="d-flex flex-column" id="displayCities">
+                <!-- [delete when done] Saved geo locations (use local storage and js cards to create.  For now/testing set cards in HTML file)
                 <!-- Cards for testing -->
-                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button>
+                <!-- <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button>
 
                 <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button>
 
@@ -48,7 +48,7 @@
 
                 <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button>
 
-                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button>
+                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button> -->
 
             </div>
 
@@ -129,7 +129,8 @@
         </div>
     </div>
 
-    <link href="./assets/js/index.js">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/index.js"></script>
 
 </body>
 </html>
