@@ -33,23 +33,16 @@
             <!-- Saved geo location cards -->
             <div class="d-flex flex-column" id="displayCities">
                 <!-- [delete when done] Saved geo locations (use local storage and js cards to create.  For now/testing set cards in HTML file)
-                <!-- Cards for testing -->
-                <!-- <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button>
-
-                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button>
-
-                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button>
-
-                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button>
-
-                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button>
-
-                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button>
-
-                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button>
-
-                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test] Wilsonville</button> -->
-
+                <!-- Saved locations will render here -->
+                <!-- test buttons -->
+                <!-- <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test]</button>
+                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test]</button>
+                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test]</button>
+                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test]</button>
+                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test]</button>
+                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test]</button>
+                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test]</button>
+                <button type="button" class="btn bg-secondary bg-gradient fs-4 rounded-3 my-2">[test]</button> -->
             </div>
 
         </div>        
@@ -58,17 +51,16 @@
 
             <!-- Current day forecast card -->
             <h1 class="m-2 fs-2 fw-bold">Current Day:</h1>
-            <div>
-                <!-- [delete when done] main current / list location, date (M/DD/YYYY), icon for day/night/cloudy/rain/windy, temp in f, wind in mph, humidity in %.  Wrap in thin board box -->
-                <div class="card border border-dark border-3 m-2">
-                    <div class="card-body fs-4 fw-bold">
-                        <h1 class="fw-bolder pb-3">[test] Wilsonville</h1>
-                        <p>(8/22/2024)</p>
-                        <p>&#x263C;</p>
-                        <p>Temp: 61 °F</p>
-                        <p>Wind: 4 MPH</p>
-                        <p>Humidity: 82 %</p>
-                    </div>
+            <!-- [delete when done] main current / list location, date (M/DD/YYYY), icon for day/night/cloudy/rain/windy, temp in f, wind in mph, humidity in %.  Wrap in thin board box -->
+            <!-- test current day card -->
+            <div class="card border border-dark border-3 m-2">
+                <div class="card-body fs-4 fw-bold" id="currentDay">
+                    <!-- <h1 class="fw-bolder pb-3">[test]</h1>
+                    <p>(8/22/2024)</p>
+                    <p>&#x263C;</p>
+                    <p>Temp: 61 °F</p>
+                    <p>Wind: 4 MPH</p>
+                    <p>Humidity: 82 %</p> -->
                 </div>
             </div>
 
@@ -76,50 +68,42 @@
             <h1 class="m-2 fs-2 fw-bold">5-Day Forecast:</h1>
             <div class="card-group">
                 <!-- [delete when done] 5-Day Forecast: 5 cards in html but content is through js and api.  date (M/DD/YYYY), icons for day/night/cloudy/rain/windy, temp in f, wind in mph, humidity in %. flex row + wrap -->
-                <div class="card fw-bold bg-secondary bg-gradient border border-dark border-3 m-2">
+                <!-- test 5-Day cards -->
+                <div class="card customBgColor text-center text-white fw-bold border border-dark border-3 m-2">
                     <div class="card-body fs-4">
                         <p>(8/22/2024)</p>
-                        <p>&#x263C;</p>
                         <p>Temp: 61 °F</p>
                         <p>Wind: 4 MPH</p>
                         <p>Humidity: 82 %</p>
                     </div>
                 </div>
-
-                <div class="card fw-bold bg-secondary bg-gradient border border-dark border-3 m-2">
+                <div class="card customBgColor text-center text-white fw-bold border border-dark border-3 m-2">
                     <div class="card-body fs-4">
                         <p>(8/22/2024)</p>
-                        <p>&#x263C;</p>
                         <p>Temp: 61 °F</p>
                         <p>Wind: 4 MPH</p>
                         <p>Humidity: 82 %</p>
                     </div>
                 </div>
-
-                <div class="card fw-bold bg-secondary bg-gradient border border-dark border-3 m-2">
+                <div class="card customBgColor text-center text-white fw-bold border border-dark border-3 m-2">
                     <div class="card-body fs-4">
                         <p>(8/22/2024)</p>
-                        <p>&#x263C;</p>
                         <p>Temp: 61 °F</p>
                         <p>Wind: 4 MPH</p>
                         <p>Humidity: 82 %</p>
                     </div>
                 </div>
-
-                <div class="card fw-bold bg-secondary bg-gradient border border-dark border-3 m-2">
+                <div class="card customBgColor text-center text-white fw-bold border border-dark border-3 m-2">
                     <div class="card-body fs-4">
                         <p>(8/22/2024)</p>
-                        <p>&#x263C;</p>
                         <p>Temp: 61 °F</p>
                         <p>Wind: 4 MPH</p>
                         <p>Humidity: 82 %</p>
                     </div>
                 </div>
-
-                <div class="card fw-bold bg-secondary bg-gradient border border-dark border-3 m-2">
+                <div class="card customBgColor text-center text-white fw-bold border border-dark border-3 m-2">
                     <div class="card-body fs-4">
                         <p>(8/22/2024)</p>
-                        <p>&#x263C;</p>
                         <p>Temp: 61 °F</p>
                         <p>Wind: 4 MPH</p>
                         <p>Humidity: 82 %</p>
@@ -130,6 +114,7 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="./assets/js/index.js"></script>
 
 </body>
