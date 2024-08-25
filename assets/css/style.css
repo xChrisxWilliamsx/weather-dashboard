@@ -7,3 +7,8 @@
 .customHeader {
     background-image: linear-gradient(to right, #3b3bd3, #00006e);
 }
+
+
+.customBgColor {
+    background-color: #00004b;
+}
