@@ -8,7 +8,15 @@
     background-image: linear-gradient(to right, #3b3bd3, #00006e);
 }
 
+/* Adjusts forecast card for screen width */ 
+@media (max-width: 1317px) {
+    .card-group {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
+/* Sets bg color for 5 Day Forecast cards */
 .customBgColor {
     background-color: #00004b;
 }
