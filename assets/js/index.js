@@ -1,6 +1,5 @@
 const apiUrl = 'https://api.openweathermap.org/data/2.5/';
 const apiKey = '5971dd25ea4e88351e9523ae7e039f0c';
-
 const cities = JSON.parse(localStorage.getItem('cities')) || [];
 
 const saveCities = (() => {
@@ -35,7 +34,6 @@ const changeCity = (() => {
     })
 })
 
-
 changeCity();
 
 const currentDayWeatherData = (() => {
@@ -57,7 +55,7 @@ const currentDay = (() => {
     setTimeout(() => {
         const currentDayData = JSON.parse(localStorage.getItem('currentWeather'));
         const currentDayCity = JSON.parse(localStorage.getItem('selectedCity'));
-        const date = dayjs().format('MM/DD/YYYY');
+        const date = dayjs().format('MM-DD-YYYY');
         let icon;
         const temp = Math.round(currentDayData.main.temp);
         const high = Math.round(currentDayData.main.temp_max);
@@ -96,13 +94,19 @@ const forecastData = (() => {
     .then(response => {
             response.json()
             .then((forecastData) => {
-                let forecastArr = forecastData.list;
-                forecastArr.forEach(data => {data.dt_txt = data.dt_txt.slice(0, 10)});              
-                const dateArr = forecastArr.map(( data ) => data.dt_txt);
-                const filterArr = forecastArr.filter((data, i) =>
-                !dateArr.includes(data.dt_txt, i + 1));
-                filterArr.shift();
-                forecastArr = filterArr;               
+                let forecastArr = forecastData.list;             
+                forecastArr.forEach(data => { data.dt_txt = data.dt_txt.slice(0, 10)});
+                const deleteDuplicates = forecastArr.filter((obj, i) => {
+                    return i === forecastArr.findIndex(o => obj.dt_txt === o.dt_txt);
+                });
+                let targetDates = Array.from({ length: 6 }, (_, i) => {
+                    const date = new Date();
+                    date.setDate(date.getDate() + i);
+                    return date.toLocaleDateString("fr-CA");
+                }); 
+                targetDates.shift();
+                const filterArr = deleteDuplicates.filter((data => targetDates.some(targetDates => targetDates == data.dt_txt)));          
+                forecastArr = filterArr;
                 localStorage.setItem('forecastData', JSON.stringify(forecastArr));
             })
             .catch(error => console.error('Error Fetching Forecast Data:', error));  
@@ -112,9 +116,22 @@ const forecastData = (() => {
 
 forecastData();
 
+const displayForecast = (() => {
+    setTimeout(() => {
+        const getForecastData = JSON.parse(localStorage.getItem('forecastData'));
+        const forecastCards = document.getElementById('forecastCards');
+        getForecastData.forEach((data) => {
+            forecastCards.insertAdjacentHTML("beforeend", 
+                `<div class="card customBgColor text-center text-white fw-bold border border-dark border-3 m-2">
+                    <div class="card-body fs-4">
+                        <p>${data.dt_txt.slice(5)}</p>
+                        <p>Temp: ${Math.round(data.main.temp)}°F</p>
+                        <p>Wind: ${Math.round(data.wind.speed)} MPH</p>
+                        <p>Humidity: ${Math.round(data.main.humidity)}%</p>
+                    </div>
+                </div>`)
+        })
+    }, 500);
+})
 
-// testing ----------------------------------------------------------------------------------------------------
-
-
-
-// end testing ------------------------------------------------------------------------------------------------
+displayForecast();
